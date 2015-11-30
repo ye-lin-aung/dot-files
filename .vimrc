@@ -26,7 +26,9 @@ filetype plugin on
 filetype indent on
 syntax enable
 set grepprg=grep\ -nH\ $*
-source ~/.vim/bundle/closetag/plugin/closetag.vim
+
+
+source ~/.vim/bundle/closetag/plugin/closetag.vim " Html auto close tags
 
 set showcmd      " Shows what you are typing as a command
 set nocompatible " Necessary for lots for cool vim things

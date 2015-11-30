@@ -14,11 +14,13 @@ Plugin 'fatih/vim-go'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'sheerun/vim-polyglot'
-
+Plugin 'chriskempson/tomorrow-theme'
 
 call vundle#end()            " required
 filetype plugin indent on    " required	
 
+set mouse=a        " Enable mouse support in console
+colorscheme Tomorrow-Night
 
 filetype on
 filetype plugin on

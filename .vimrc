@@ -28,6 +28,8 @@ filetype indent on
 syntax enable
 set grepprg=grep\ -nH\ $*
 
+"Go Lint
+set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 
 source ~/.vim/bundle/closetag/plugin/closetag.vim " Html auto close tags
 

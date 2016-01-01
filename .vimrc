@@ -8,6 +8,9 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+
+
+
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'fatih/vim-go'
@@ -30,6 +33,9 @@ set grepprg=grep\ -nH\ $*
 
 "Go Lint
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
+
+
+
 
 source ~/.vim/bundle/closetag/plugin/closetag.vim " Html auto close tags
 

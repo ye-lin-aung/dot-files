@@ -11,7 +11,7 @@ call vundle#begin()
 
 
 
-" let Vundle manage Vundle, required
+" let Vundle manage Vundle, required"
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'fatih/vim-go'
 Plugin 'scrooloose/nerdtree'
@@ -23,7 +23,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required	
 
 set mouse=a        " Enable mouse support in console
-colorscheme Tomorrow-Night
+colorscheme darkblue 
 
 filetype on
 filetype plugin on
@@ -33,6 +33,15 @@ set grepprg=grep\ -nH\ $*
 
 "Go Lint
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
+
+"added multiple search
+function! SearchMultiLine(bang, ...)
+	  if a:0 > 0
+		      let sep = (a:bang) ? '\_W\+' : '\_s\+'
+		          let @/ = join(a:000, sep)
+			    endif
+		    endfunction
+		    command! -bang -nargs=* -complete=tag S call SearchMultiLine(<bang>0, <f-args>)|normal! /<C-R>/<CR>
 
 
 

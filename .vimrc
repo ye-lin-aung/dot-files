@@ -8,7 +8,7 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-
+execute pathogen#infect()
 
 
 " let Vundle manage Vundle, required"
@@ -56,3 +56,4 @@ set ai           " Auto indent
 set si           " Smart indet
 set wrap         " Wrap lines
 syntax on
+color Crystallite

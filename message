@@ -2,7 +2,12 @@
 
 while(true) do 
 echo "Enter message"
-read message
-echo $message | wall 
+read  message  
+now="$(date +"%r")"
+echo $now | wall
+figlet $message | wall 
+
+
+
 
 done

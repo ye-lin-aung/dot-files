@@ -56,7 +56,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'chriskempson/tomorrow-theme'
-
+Plugin 'benmills/vimux'
+Plugin 'tpope/vim-fugitive' " the ultimate git helper
+Plugin 'tpope/vim-commentary' 
 call vundle#end()            " required
 filetype plugin indent on    " required	
 

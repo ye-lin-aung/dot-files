@@ -15,7 +15,7 @@ execute pathogen#infect()
 let g:pymode_python = 'python3'
 
 
- " let g:syntastic_python_python_exec = 'python3' 
+" let g:syntastic_python_python_exec = 'python3' 
 " Track the engine.
 " Plugin 'SirVer/ultisnips'
 "
@@ -28,6 +28,28 @@ let g:pymode_python = 'python3'
 let g:UltiSnipsJumpForwardTrigger="<c-c>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+
+map <C-R>vr :VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
+
+map <C-R>vc :VimuxRunCommand("
+
+" Prompt for a command to run
+map <C-R>vp :VimuxPromptCommand<CR>
+"
+"   " Run last command executed by VimuxRunCommand
+map <C-R>vl :VimuxRunLastCommand<CR>
+"
+"     " Inspect runner pane
+map <C-R>vi :VimuxInspectRunner<CR>
+"
+"       " Close vim tmux runner opened by VimuxRunCommand
+map <C-R>vq :VimuxCloseRunner<CR>
+"
+"         " Interrupt any command running in the runner pane
+map <C-R>vx :VimuxInterruptRunner<CR>
+"
+"           " Zoom the runner pane (use <bind-key> z to restore runner pane)
+map <C-R>vz :call VimuxZoomRunner()<CR>
 "
 " " If you want :UltiSnipsEdit to split your window.
 " let g:UltiSnipsEditSplit="vertical"Plugin 'SirVer/ultisnips'
@@ -38,7 +60,7 @@ Plugin 'honza/vim-snippets'
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
 
-  let g:UltiSnipsUsePythonVersion = 3
+let g:UltiSnipsUsePythonVersion = 3
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
@@ -76,12 +98,12 @@ set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 
 "added multiple search
 function! SearchMultiLine(bang, ...)
-	  if a:0 > 0
-		      let sep = (a:bang) ? '\_W\+' : '\_s\+'
-		          let @/ = join(a:000, sep)
-			    endif
-		    endfunction
-		    command! -bang -nargs=* -complete=tag S call SearchMultiLine(<bang>0, <f-args>)|normal! /<C-R>/<CR>
+	if a:0 > 0
+		let sep = (a:bang) ? '\_W\+' : '\_s\+'
+		let @/ = join(a:000, sep)
+	endif
+endfunction
+command! -bang -nargs=* -complete=tag S call SearchMultiLine(<bang>0, <f-args>)|normal! /<C-R>/<CR>
 
 
 

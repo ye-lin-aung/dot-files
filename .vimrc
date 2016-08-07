@@ -72,6 +72,7 @@ let g:syntastic_python_python_exec = '/Library/Python/2.7/'
 
 set guifont=Menlo\ for\ Powerline
 " let Vundle manage Vundle, required"
+Plugin 'alvan/vim-php-manual'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'fatih/vim-go'
 Plugin 'scrooloose/nerdtree'

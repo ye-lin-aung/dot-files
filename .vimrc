@@ -69,7 +69,7 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
 let g:syntastic_python_python_exec = '/Library/Python/2.7/'
 
-
+Plugin 'artur-shaik/vim-javacomplete2'
 set guifont=Menlo\ for\ Powerline
 " let Vundle manage Vundle, required"
 Plugin 'alvan/vim-php-manual'

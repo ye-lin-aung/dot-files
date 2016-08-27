@@ -103,7 +103,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required	
 
 set mouse=a        " Enable mouse support in console
-colorscheme darkblue 
+colorscheme monokai 
 
 filetype on
 filetype plugin on
